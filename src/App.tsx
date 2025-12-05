@@ -6,7 +6,7 @@ import { useFirebase } from './main';
 import { getDatabase, ref, set, onValue, get, update, remove, Database, serverTimestamp } from "firebase/database";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-const ONE_TIME_APP: boolean = true;
+const ONE_TIME_APP: boolean = false;
 const DEBUG: boolean = false;
 
 function formatDate(ts: number) {

@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "current-quest": {
+      ".read": true,
+      "count": {
+        ".write": "auth != null && auth.uid === 'ip4hKO1Vn3OsVXMe7oM7cPiHMmh1'",
+        ".read": true
+      },
+      "max-count": {
+        ".read": true,
+        ".write": "auth != null && auth.uid === 'ip4hKO1Vn3OsVXMe7oM7cPiHMmh1'"
+      }
+    },
+    "master-password": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

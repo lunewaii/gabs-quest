@@ -1,0 +1,224 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.progress-btn {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff73;
+  border: 1px solid #888;
+  color: #fff;
+  width: 180px;
+  height: 48px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  cursor: pointer;
+}
+
+.progress-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50 60%, #81c784 100%);
+  transition: width 0.5s;
+  z-index: 0;
+}
+
+.progress-text {
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.password-form {
+  margin-top: 1rem;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-items: flex-start; */
+  display: grid;
+  grid-template-areas:
+    "input submit"
+    "message message";
+  grid-template-columns: 1fr auto;
+
+  gap: 0.5rem;
+}
+
+.password-input {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #888;
+  grid-area: input;
+}
+
+.password-submit {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+  grid-area: submit;
+}
+
+.password-submit:disabled {
+  background: #a5d6a785;
+  cursor: not-allowed;
+}
+
+.password-error {
+  color: red;
+  font-size: 0.95rem;
+  margin-top: 2px;
+  grid-area: message;
+}
+
+.congrats-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.congrats-message {
+  position: fixed;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(44, 62, 80, 0.85);
+  padding: 24px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 10001;
+  animation: fade-in 0.7s, congrats-pulse 2.2s 0.7s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes congrats-pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  20% {
+    transform: translateX(-50%) scale(1.04);
+  }
+
+  40% {
+    transform: translateX(-50%) scale(0.98);
+  }
+
+  60% {
+    transform: translateX(-50%) scale(1.06);
+  }
+
+  80% {
+    transform: translateX(-50%) scale(0.97);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.confetti-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.debug-btn {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  opacity: 0.85;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.debug-btn:hover {
+  background: #1976d2;
+  opacity: 1;
+}
